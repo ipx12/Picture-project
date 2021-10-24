@@ -32,7 +32,6 @@ const filter = () => {
             switch (e.target.classList[0]) {
                 case 'all' :
                     typeFilter(wrapper.querySelectorAll('.all'));
-                    console.log(1);
                     break;
                 case 'lovers' :
                     typeFilter(wrapper.querySelectorAll('.lovers'));
