@@ -66,14 +66,15 @@ const forms = (state) => {
 
             const formData = new FormData(item);
 
-            if (item.getAttribute('data-calc') === "calc") {
-                for (let key of state) {
-                    formData.append(key, state[key]);
-                }
-            }
+            // if (item.getAttribute('data-calc') === "calc") {
+            //     for (let key of state) {
+            //         formData.append(key, state[key]);
+            //     }
+            // }
 
             let api;
-            item.closest('.popup-design') || item.classList.contains('calc_form') ? api = path.designer : api = path.question;
+            item.closest('.popup-design') || item.classList.contains('calc_form') ?
+                api = path.designer : api = path.question;
             console.log(api);
 
             postData(api, formData)
